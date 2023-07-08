@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-static int	ptrlen(unsigned int ptr)
+static int	ptrlen(unsigned long ptr)
 {
 	int	i;
 
@@ -13,7 +13,7 @@ static int	ptrlen(unsigned int ptr)
 	return (i);
 }
 
-static void	ft_ptrput(unsigned int ptr, char *hex)
+static void	ft_ptrput(unsigned long ptr, char *hex)
 {
 	if (ptr < 16)
 	{
@@ -26,7 +26,7 @@ static void	ft_ptrput(unsigned int ptr, char *hex)
 	}
 }
 
-int	ft_putptr(unsigned int ptr)
+int	ft_putptr(unsigned long ptr)
 {
 	int	len;
 

@@ -10,7 +10,7 @@ static int	ft_type(int s, va_list args)
 	else if (s == 's')
 		len += ft_putstr(va_arg(args, char *));
 	else if (s == 'p')
-		len += ft_putptr(va_arg(args, unsigned int));
+		len += ft_putptr(va_arg(args, unsigned long));
 	else if (s == 'i' || s == 'd')
 		len += ft_putnbr(va_arg(args, int));
 	else if (s == 'u')
