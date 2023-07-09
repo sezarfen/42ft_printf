@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdundar <42istanbul.com.tr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 08:45:44 by fdundar           #+#    #+#             */
+/*   Updated: 2023/07/09 08:45:46 by fdundar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_type(int s, va_list args)
@@ -20,10 +32,7 @@ static int	ft_type(int s, va_list args)
 	else if (s == 'X')
 		len += ft_puthex(va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if (s == '%')
-	{
-		ft_putchar('%');
-		len++;
-	}
+		len += ft_putchar('%');
 	return (len);
 }
 
@@ -45,7 +54,8 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 			len += write(1, &format[i], 1);
-		i++;
+		if (format[i])
+			i++;
 	}
 	va_end(args);
 	return (len);
