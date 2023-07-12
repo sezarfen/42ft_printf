@@ -1,3 +1,3 @@
 # 42ft_printf
 
-Still there might be some issues to fix (especially in %p)
+Recoding function printf , with "cspdiuxX%" formats, it is work like printf , but it isn't :)
