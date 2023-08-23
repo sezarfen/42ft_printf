@@ -2,7 +2,7 @@ SRCS= ft_printf.c ft_put_char_str.c ft_putptr.c ft_putnbr.c ft_printuint.c ft_pu
 OBJS = ${SRCS:.c=.o}
 NAME = libftprintf.a
 LIBC = ar rcs
-CC = cc
+CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
