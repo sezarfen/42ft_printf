@@ -6,10 +6,10 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
+all: ${NAME}
+
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
-
-all: ${NAME}
 
 clean:
 	${RM} ${OBJS}
